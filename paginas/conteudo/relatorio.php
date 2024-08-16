@@ -30,16 +30,46 @@
                   </tr>
                   </thead>
                   <tbody>
-                  
+                  <?php
+                  // Consulta SQL para selecionar os contatos do usuário atual
+                  $select = "SELECT * FROM tb_contatos WHERE id_user = :id_user ORDER BY id_contatos ";
+
+                  try{
+                     // Prepara a consulta SQL com o parâmetro :id_use
+                    $result = $conect->prepare($select);
+                    $cont = 1; // Inicializa o contador de linhas
+                    // Vincula o ID do usuário ao parâmetro :id_user
+                    $result->bindParam(':id_user', $id_user, PDO::PARAM_INT);
+                    // Executa a consulta SQL
+                    $result->execute();
+                    // Verifica se a consulta retornou algum resultado
+                    $contar = $result->rowCount();
+
+                    if ($contar > 0) {
+                      // Itera sobre cada linha de resultado da consulta
+                      while ($show = $result->FETCH(PDO::FETCH_OBJ)) {
+                      
+                      
+                      
+                ?>
                                       
                     <tr>
-                      <td>1</td>
+                      <td><?php echo $cont++; ?></td>
                       <td>
-                      <img src="images/">
+                      <?php
+                        // Verifica se a variável $foto_user é igual a 'avatar-padrao.png'
+            if ($show->foto_contatos == 'avatar-padrao.png') {
+              // Exibe a imagem do avatar padrão
+              echo '<img src="../img/avatar_p/' . $show->foto_contatos . '" alt="' . $show->foto_contatos . '" title="' . $show->foto_contatos . '" style="width: 50px; border-radius: 100%;">';
+          } else {
+              // Exibe a imagem do usuário
+              echo '<img src="../img/cont/' . $show->foto_contatos . '" alt="' . $show->foto_contatos . '" title="' . $show->foto_contatos . '" style="width: 50px; border-radius: 100%;">';
+          }
+                      ?>
                      </td>
-                      <td>Leandro Costa</td>
-                      <td>85991446498</td>
-                      <td>francisco.silva92@prof.ce.gov.br</td>
+                      <td><?php echo $show->nome_contatos; ?></td>
+                      <td><?php echo $show->fone_contatos; ?></td>
+                      <td><?php echo $show->email_contatos; ?></td>
                       
                       <td>
                       <div class="btn-group">
@@ -48,7 +78,18 @@
                       </div>
                       </td>
                     </tr>
-                   
+                  <?php
+                  }
+                    }else{
+                      echo '<div class="alert alert-danger">
+                      <button type="button" class="close" data-dismiss="alert">×</button>
+                      <strong>Erro!</strong> Não há Contatos.</div>';
+                    }
+                    }catch(Exception $e){
+                    // Exibe a mensagem de erro de PDO
+                    echo '<strong>ERRO DE PDO= </strong>' . $e->getMessage();
+                }
+                  ?>
                   </tbody>
                   <tfoot>
                   <tr>
@@ -61,10 +102,6 @@
                   </tr>
                   </tfoot>
                 </table>
-                <div class="col-lg-12 d-flex justify-content-center">
-                  <a href="conteudo/relatoriopdf.php?id=<?php echo $id_user;?>" class="btn btn-lg btn-primary">Gerar relatório completo</a>
-                </div>
-                </div>
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
