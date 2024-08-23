@@ -1,6 +1,6 @@
 # Agenda Eletrônica
 
-Bem-vindo ao projeto **Agenda Eletrônica**! Este aplicativo é uma ferramenta moderna e eficiente para gerenciar compromissos e eventos, projetado para ajudar você a manter sua vida organizada e produtiva. Com uma interface amigável e recursos avançados, a Agenda Eletrônica é ideal para usuários que buscam uma solução completa para suas necessidades de agendamento.
+Bem-vindo ao projeto **Agenda Eletrônica**! Este aplicativo é uma ferramenta moderna e eficiente para gerenciar usuários, projetado para ajudar você a manter seus contatos organizados. Com uma interface amigável e recursos avançados, a Agenda Eletrônica é ideal para usuários que buscam uma solução completa para suas necessidades de agendamento.
 
 ## Índice
 
@@ -15,7 +15,7 @@ Bem-vindo ao projeto **Agenda Eletrônica**! Este aplicativo é uma ferramenta m
 
 ## Sobre o Projeto
 
-A **Agenda Eletrônica** é um aplicativo inovador que visa transformar a forma como você organiza seu tempo. Com funcionalidades ricas e uma interface intuitiva, este projeto combina as melhores práticas de design de software com tecnologias modernas para oferecer uma experiência de gerenciamento de agenda excepcional.
+A **Agenda Eletrônica** é um aplicativo inovador que visa transformar a forma como você organiza usuários de sua preferência. Com funcionalidades ricas e uma interface intuitiva, este projeto combina as melhores práticas de design de software com tecnologias modernas para oferecer uma experiência de gerenciamento de agenda excepcional.
 
 ### Principais Recursos
 
@@ -28,12 +28,11 @@ A **Agenda Eletrônica** é um aplicativo inovador que visa transformar a forma 
 
 ## Funcionalidades
 
-- **Cadastro e Gerenciamento de Compromissos:** Adicione, edite e exclua compromissos de forma simples e rápida.
-- **Visualização Personalizada:** Veja seus compromissos em diferentes modos (diária, semanal, mensal) e ajuste a visualização conforme suas preferências.
-- **Notificações Personalizáveis:** Configure lembretes para cada compromisso e receba notificações por e-mail ou via push.
+- **Cadastro e Gerenciamento de Compromissos:** Adicione, edite e exclua pessoas de forma simples e rápida.
+- **Visualização Personalizada:** Veja pessoas em diferentes modos (foto, nome, e-mail) e ajuste a visualização conforme suas preferências.
+- **Notificações Personalizáveis:** Configure e baixe tabelas com todas as pessoas via (pdf, print, exel).
 - **Sincronização com Calendários Externos:** Integre com Google Calendar, Outlook e outros serviços para manter todos os seus compromissos em sincronia.
-- **Busca Avançada:** Encontre compromissos rapidamente usando filtros de data, tags e palavras-chave.
-- **Gerenciamento de Tarefas:** Crie listas de tarefas associadas a compromissos e marque-as como concluídas.
+- **Busca Avançada:** Encontre pessoas rapidamente usando filtros de data, tags e palavras-chave.
 - **Perfil de Usuário:** Cada usuário pode ter um perfil personalizado com preferências e configurações específicas.
 
 ## Tecnologias Utilizadas
@@ -52,11 +51,11 @@ Siga os passos abaixo para configurar o projeto em sua máquina local.
 
 ### Requisitos
 
-- Node.js (versão 16 ou superior)
-- npm ou yarn
+- Visual Studio Code (version 1.92)
+- MySQL Workbench
 
 ### Passos para Instalação
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/agenda-eletronica.git
+   git clone https://github.com/Jeremias-Oliveira/new_agenda_2024.git
