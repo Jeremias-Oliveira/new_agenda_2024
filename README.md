@@ -58,4 +58,4 @@ Siga os passos abaixo para configurar o projeto em sua máquina local.
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/Jeremias-Oliveira/new_agenda_2024.git
+   git clone https://github.com/Jeremias-Oliveira/new_agenda_2024
